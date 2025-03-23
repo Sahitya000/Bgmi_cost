@@ -1,0 +1,246 @@
+
+1) using R excute to basic commands array list and farms.
+
+a <- array(c(2:8))
+print(a)
+
+l <- list("java", "python", c(4:6))
+print(l)
+
+f <- data.frame(
+  roll = c(1:3), 
+  name = c("raj", "sania", "monica"), 
+  sgpa = c(8.36, 9.2, 8.86)
+)
+print(a)
+print(l)
+print(f)
+
+
+2) create a matrix using R and perform operation and like addli.., mu.., transpo.. and multiplication.
+
+matA <- matrix(c(10:18), nrow=3, byrow=TRUE)
+matB <- matrix(c(1:9), nrow=3, byrow=TRUE)
+
+print("Matrix A:")
+print(matA)
+
+print("Matrix B:")
+print(matB)
+
+print("Addition of two matrices:")
+print(matA + matB)
+
+print("Subtraction of two matrices:")
+print(matA - matB)
+
+print("Element-wise multiplication of two matrices:")
+print(matA * matB)
+
+print("Element-wise division of two matrices:")
+print(matA / matB)
+
+print("Modulus of two matrices (element-wise):")
+print(matA %% matB)
+
+print("Transpose of Matrix A:")
+print(t(matA))
+
+print("Transpose of Matrix B:")
+print(t(matB))
+
+
+3) Lising R execute the statistical functions: mean, median, mode, quantike, rorge, inter quantile histogram. 
+
+v <- c(4, 7, 8, 9, 6, 2, 1, 7, 4, 7)
+
+cat("Mean:", mean(v), "\n")
+
+cat("Median:", median(v), "\n")
+
+get_mode <- function(v) {
+  uniq_v <- unique(v)
+  uniq_v[which.max(tabulate(match(v, uniq_v)))]
+}
+
+cat("Mode:", get_mode(v), "\n")
+
+cat("Range:", max(v) - min(v), "\n")
+
+cat("Quartile 1:", quantile(v, 0.25), "\n")
+
+cat("Quartile 2 (Median):", quantile(v, 0.5), "\n")
+
+cat("Quartile 3:", quantile(v, 0.75), "\n")
+
+cat("Inter-Quartile Range:", IQR(v), "\n")
+
+
+
+4) Using R execute the base commandy, array, list and form.
+
+
+Print("using R execute the basic commands, array, list and frames")
+
+print("Hello World!")
+
+print(100 + 50)  # Corrected from 'co+50'
+
+v1 <- c(5, 9, 3)
+print("Vector 1:")
+print(v1)
+
+v2 <- c(10, 11, 12, 13, 14, 15)
+print("Vector 2:")
+print(v2)
+
+result <- array(c(v1, v2), dim = c(3, 3, 2))
+print("Array:")
+print(result)
+
+list1 <- list("Blue", "Yellow", c(1, 2, 3), 4443, 321.3, TRUE)
+print("List:")
+print(list1)
+
+names <- c("Raj", "Sona", "Ram", "Siya")
+marks <- c(45, 50, 100, 90)
+
+report <- data.frame(Name = names, Marks = marks)
+print("Data Frame:")
+print(report)
+
+
+
+5) Create a matrix using R and perform the operations. of addition Transpose and multiplication operations.
+
+
+
+m1 <- matrix(c(1:9), nrow = 3, byrow = TRUE)
+print("Matrix m1:")
+print(m1)
+
+m2 <- matrix(c(4:12), nrow = 3, byrow = TRUE)
+print("Matrix m2:")
+print(m2)
+
+print("Addition of m1 and m2:")
+print(m1 + m2)
+
+print("Transpose of m1:")
+print(t(m1))
+
+print("Transpose of m2:")
+print(t(m2))
+
+print("Multiplication of m1 and m2:")
+print(m1 %*% m2)
+
+if (det(m1) != 0) {
+  print("Inverse of m1:")
+  print(solve(m1))
+} else {
+  print("Matrix m1 does not have an inverse.")
+}
+
+if (det(m2) != 0) {
+  print("Inverse of m2:")
+  print(solve(m2))
+} else {
+  print("Matrix m2 does not have an inverse.")
+}
+
+
+
+6) R programming supporty decision making like any other programming language with the help of following Statements.
+
+
+
+x <- 2 - 5
+if (x > 0) {
+  print("Positive number")
+} else {
+  print("Negative number")
+}
+
+x <- -5
+if (x > 0) {
+  print("Non-negative number")
+} else {
+  print("Negative number")
+}
+
+gk <- switch(2,
+  "First",
+  "Second",
+  "Third",
+  "Fourth"
+)
+print("The selected case is:")
+print(gk)
+
+
+
+7a) loops in R programming.
+
+When a certain activity programming needs to be repeated then loops are used R programming supports for types of loops.
+
+
+x <- c(2, 5, 3, 9, 8, 11, 6)
+
+Count <- 0
+
+for (val in x) {
+  if (val %% 2 == 0) {
+    Count <- Count + 1
+  }
+}
+
+print("Count of even numbers:")
+print(Count)
+
+
+
+7b) While loop - The while continues executing a block of codes untile a specific con.....
+
+
+i <- 1
+
+while (i < 6) {
+  print(i)
+  i <- i + 1  
+}
+
+
+7c) Break & next the  Statements: Break statement inter.... the executed of a loops and directs the flow outslide. these are used in ease of......
+
+
+x <- 1:5
+for (val in x) {
+  if (val == 3) {
+    break  
+  }
+}
+print("Value when loop breaks:")
+print(val)
+
+x <- 1:5
+for (val in x) {
+  if (val == 3) {
+    next  
+  }
+  print(val) 
+}
+
+
+
+7d) Repeat Loop: It repeats a block of code ...............................................
+
+x <- 1
+
+repeat {
+  print(x)
+  x <- x + 1
+  if (x == 6) {
+    break  
+  }
+}
